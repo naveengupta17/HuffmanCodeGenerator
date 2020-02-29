@@ -18,10 +18,12 @@ public class Main {
         final Scanner scanner = new Scanner(System.in);
         String userInput = scanner.nextLine().trim();
         BinaryGenerator binaryGenerator = new BinaryGenerator(userInput);
-        String binaryString = binaryGenerator.convertNormalStringToBinaryString();
+        StringBuilder binaryString = binaryGenerator.convertNormalStringToBinaryString();
         HuffmanGenerator huffmanGenerator = new HuffmanGenerator(userInput);
         String huffmanString = huffmanGenerator.convertNormalStringToHuffmanString();
         int lengthOfBinaryString = binaryString.length();
+        System.out.println(binaryString);
+
         int lengthOfHuffmanString = huffmanString.length();
         System.out.println("The binary string has " + lengthOfBinaryString + " characters.");
         System.out.println("The huffman string has " + lengthOfHuffmanString + " characters.");
